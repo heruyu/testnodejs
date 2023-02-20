@@ -1,3 +1,4 @@
+"use strict";
 import { DynamoDB } from "@aws-sdk/client-dynamodb";
 import { DynamoDBDocument } from "@aws-sdk/lib-dynamodb";
 import { v4 } from "uuid";
@@ -20,7 +21,7 @@ const postUser = async (event) => {
     var user = {
       TableName: "users",
       Item: {
-        name: body.name,
+        users_name: body.name,
         age: body.age,
         user_id: id,
       },
